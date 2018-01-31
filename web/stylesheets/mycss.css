@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/12/2014, 04:41:09 PM
+    Author     : ricar_000
+*/
+html{font-size:20px}
+body{background: #222}
+section{background: rgba(255, 255, 255, .8); box-sizing:border-box; float:left;margin:1%; padding:1rem;width:100%;}
+img{max-width:100%; height:auto;}
+/*Sintaxis para los media querys
+@media(){}
+break points
+El estilo que aparace despues, sobre escribe al anterior
+*/
+
+/*
+REM: Tamaño fuente de la base el que esta en html{font-size} tamaño de fuente por defecto es de 16px
+EM: Medida relativa al padre, jerarquico EJ: section{padding: .9em; padding:1em}, lo que sucedera es que el padding será de 1 con respeto al 90% que declare en el section
+*/
+@media(min-width: 360px){
+    body{background: greenyellow}
+	section{width:48%;}
+}
+@media(min-width: 728px){
+    body{background: blueviolet}
+	section{width:31.3%;}
+}
+@media(min-width: 1200px){
+    body{background: red}
+	section{width:23%;}
+}
+/*ul{clear:both;}
+ul li{font-size:.9em}*/

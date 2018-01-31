@@ -1,0 +1,17 @@
+                                               
+@media print{
+    @page{
+        size: letter portrait;      
+
+    }
+    @page :first{ 
+        margin-left: 5mm;
+        margin-bottom: 3mm;
+        margin-right: 5mm;
+        margin-top: 0mm;  
+} 
+td{ 
+    font-size: 4px;
+}
+}
+               

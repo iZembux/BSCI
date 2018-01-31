@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/11/2014, 10:15:38 AM
+    Author     : Sistemas 2013
+*/
+
+.odometros{
+    box-sizing:border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.odometro{
+    box-sizing:border-box;
+    float: left;
+    width: 100%;
+    height: 480px;
+    margin: 5px;
+    border: 0px solid blue;
+    text-align: center;
+}
+
+@media(min-width: 360px){
+    .odometros{margin: 10px 5px;}
+}
+@media(min-width: 480px){
+    .odometros{margin: 10px 5px;}
+}
+@media(min-width: 768px){
+    .odometro{width:48%;}
+    .odometros{margin: 10px 50px;}
+}
+@media(min-width: 980px){
+    .odometro{width:48%;}
+    .odometros{margin: 10px 50px;}
+}
+@media(min-width: 1280px){
+    .odometro{width:31.3%;}
+    .odometros{margin: 10px 70px;}
+}
+@media(min-width: 1920px){
+    .odometro{width:31.3%;}
+    .odometros{margin: 10px 100px;}
+}
