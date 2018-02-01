@@ -42,6 +42,7 @@
         try { 
         String nombre = request.getParameter("nombre");
         String pass = request.getParameter("pass");
+        String puesto = request.getParameter("puesto");
         System.out.println("Usuario: " +nombre);
         System.out.println("Contraseña: "+pass);
         Userbi objUsuario = new Userbi(); 

@@ -112,6 +112,7 @@ String añohoy = String.valueOf(fecha_hoy.get(Calendar.YEAR));
                             <li><a href="ReportesG.jsp">Reportes</a></li>
                              <li><a href="ReportesG_Anual.jsp">BSCI Anual</a></li> 
                             <li><a href="GenerarResultadoBSC.jsp">Resultados BSCI</a></li>
+                            <li><a href="GenerarResultadoBSC_Anual.jsp">Resultados BSCI Anual</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

@@ -191,11 +191,11 @@
                             double totalOptimo6 = 0, porcentajeExito6 = 0.0, totalObtenido7 = 0, totalOptimo7 = 0, porcentajeExito7 = 0.0, totalObtenido8 = 0, totalOptimo8 = 0, porcentajeExito8 = 0.0;
                             double totalObtenido9 = 0, totalOptimo9 = 0, porcentajeExito9 = 0.0, totalesOP = 0, totalesOB = 0, totalesP = 0.0;
                             for (int tabla = 0; tabla < arrayDepartamentos.size(); tabla++) {
-                                arrayBalance = generarReporte.genenrarBalanceXDepartamento(mesReporte, anioReporte, arrayDepartamentos.get(tabla).getBal_identificaDepartamento(), unidadNegocio);
+                                arrayBalance = generarReporte.genenrarBalanceXDepartamentoAcum(mesReporte, anioReporte, arrayDepartamentos.get(tabla).getBal_identificaDepartamento(), unidadNegocio);
                                 puntosResumen[tabla][0] = arrayDepartamentos.get(tabla).getBal_departamento();
                                 for (int i = 0; i < arrayBalance.size(); i++) {
                                     double puntosObtenidos = arrayBalance.get(i).getBal_PuntosObtenidos();
-                                    arrayBalance = generarReporte.genenrarBalanceXDepartamento(mesReporte, anioReporte, arrayDepartamentos.get(tabla).getBal_identificaDepartamento(), unidadNegocio);
+                                    arrayBalance = generarReporte.genenrarBalanceXDepartamentoAcum(mesReporte, anioReporte, arrayDepartamentos.get(tabla).getBal_identificaDepartamento(), unidadNegocio);
                                     puntosResumen[tabla][0] = arrayDepartamentos.get(tabla).getBal_departamento();
                                     double puntosOptimos = arrayBalance.get(i).getBal_PuntosOptimos();
                                     String idDepartamento = arrayBalance.get(i).getBal_identificaDepartamento();

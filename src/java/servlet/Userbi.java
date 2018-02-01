@@ -510,6 +510,7 @@ public class Userbi implements Serializable {
                     objUsuario.setNombre(rs.getString("Nombre"));
                     objUsuario.setDepartamento(rs.getString("Departamento"));
                     objUsuario.setDesde(rs.getString("Desde"));
+                    objUsuario.setPuesto(rs.getString("Puesto"));
                     objUsuario.setConti(rs.getInt("Conti"));
                     objUsuario.setMitsu(rs.getInt("Mitsu"));
                     objUsuario.setFiat(rs.getInt("fiat"));
