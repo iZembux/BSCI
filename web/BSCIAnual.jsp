@@ -398,7 +398,9 @@
                                     totalOptimo += puntosOptimos;
                                     resultadoObtenido += resultadoObtenido;
                                     puntuacionMaxima += puntuacionMaxima;
-                                    if (Indicador.equals("Porcentaje de ordenes de servicio abiertas mayores a 15 dias") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
+                                    if (Indicador.equals("Porcentaje de ordenes de servicio abiertas mayores a 15 dias")
+                                            || Indicador.equals("Avance de Campañas")
+                                            || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
                                             || Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Indice de Satisfaccion de Empleados")
                                             || Indicador.equals("Porcentaje de órdenes abiertas mayores a 15 días") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitación")
                                             || Indicador.equals("Índice de Rotación de Empleados") || Indicador.equals("Índice de Satisfacción del Personal")
@@ -480,6 +482,10 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%> 
+                        
+                        
+                        
+                        
                        <% }else if(medida.equals("%")){%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>

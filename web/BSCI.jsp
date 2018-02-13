@@ -434,7 +434,9 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
-                        <%}else if(medida.equals("%") && Indicador.equals("CSI")){  %>
+                       
+                        
+                         <%}else if(medida.equals("%") && Indicador.equals("CSI")){  %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
                         <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
@@ -457,6 +459,8 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%> 
+                        
+                        
                        <% }else if(medida.equals("%")){%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>

@@ -60,6 +60,7 @@ public class balanceCuatrimestral {
     if (con != null) {
       try
       {
+          System.out.println("------------------------------"+sql);
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {
