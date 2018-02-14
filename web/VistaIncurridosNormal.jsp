@@ -135,7 +135,8 @@
                             <li><a href="IndicadorC.jsp?empresa=AutopolancoChrysler">Autopolanco CDFJR</a></li>
                             <li><a href="IndicadorC.jsp?empresa=Nihon">Toyota Santa Fe</a></li>
                             <li><a href="IndicadorC.jsp?empresa=PuertaSantaFe">Puerta Santa Fe</a></li>
-                            <li><a href="IndicadorC.jsp?empresa=AlfaRomeo">Alfa-Auto</a></li>
+                            <li><a href="IndicadorC.jsp?empresa=Alfa-Auto">Alfa-Auto</a></li>
+                            <li><a href="IndicadorC.jsp?empresa=Mitsu-Auto">Mitsu-Auto</a></li>
                         </ul>
                     </li>
                     <li class="active">
@@ -212,6 +213,7 @@
                             <option value="AutopolancoFiat">Autopolanco Fiat</option>
                             <option value="AutopolancoChrysler">Autopolanco Chrysler</option>
                             <option value="Alfa-Auto">Alfa-Auto</option>
+                            <option value="Mitsu-Auto">Mitsu-Auto</option>
                             <option value="Nihon">Toyota</option>
                             <option value="PuertaSantaFe">Puerta Santa Fe</option> 
                             

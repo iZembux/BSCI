@@ -95,7 +95,8 @@
                             <option value="Nihon">Nihon</option>
                             <option value="HyundaiPatriotismo">Hyundai Patriotismo</option> 
                              <option value="PuertaSantaFe">Puerta Santa Fe</option> 
-                             <option value="AlfaRomeo">Alfa Romeo</option> 
+                             <option value="Alfa-Auto">Alfa-Auto</option> 
+                             <option value="Mitsu-Auto">Mitsu-Auto</option>
                             <option value="Mitsubishi">Mitsubishi</option> 
                         </select>
                     </td>
