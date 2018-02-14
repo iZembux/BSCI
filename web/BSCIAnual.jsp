@@ -143,7 +143,7 @@
                 razonSocial = "MITSUBISHI";
             }    
        %>
-        <style type="text/css" media="print">
+              <style type="text/css" media="print">
         .oculto {display:none}
         </style>
         <form> 
@@ -181,7 +181,7 @@
                         <td bgcolor="#23350c" width="4%" align="CENTER" style="font-weight: bold;  border: black 1px solid; font-family: Calibri"><font color="white" size="2">TOTALES</font></td>
                     </tr>
                     <tr>
-                        <td bgcolor="#23350c" align="CENTER" style="font-weight: bold;  border: black 1px solid; font-family: Calibri"><font color="white" size="1">PUNTUACIÓN MÁXIMA</td></font>
+                        <td bgcolor="#23350c" align="CENTER" style="font-weight: bold;  border: black 1px solid; font-family: Calibri"><font color="white" size="1">PUNTUACI?N M?XIMA</td></font>
                         <%
                             double totalObtenido = 0, totalOptimo = 0, porcentajeExito = 0.0, totalObtenido2 = 0, totalOptimo2 = 0, porcentajeExito2 = 0.0, totalObtenido3 = 0, totalOptimo3 = 0;
                             double porcentajeExito3 = 0.0, totalObtenido4 = 0, totalOptimo4 = 0, porcentajeExito4 = 0.0, totalObtenido5 = 0, totalOptimo5 = 0, porcentajeExito5 = 0.0, totalObtenido6 = 0;
@@ -360,10 +360,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;  border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-                        <td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -395,14 +391,12 @@
                                     totalOptimo += puntosOptimos;
                                     resultadoObtenido += resultadoObtenido;
                                     puntuacionMaxima += puntuacionMaxima;
-                                    if (Indicador.equals("Porcentaje de ordenes de servicio abiertas mayores a 15 dias")
-                                            || Indicador.equals("Avance de Campañas")
-                                            || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
+                                    if (Indicador.equals("Porcentaje de ordenes de servicio abiertas mayores a 15 dias") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
                                             || Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Indice de Satisfaccion de Empleados")
-                                            || Indicador.equals("Porcentaje de órdenes abiertas mayores a 15 días") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitación")
-                                            || Indicador.equals("Índice de Rotación de Empleados") || Indicador.equals("Índice de Satisfacción del Personal")
+                                            || Indicador.equals("Porcentaje de ?rdenes abiertas mayores a 15 d?as") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitaci?n")
+                                            || Indicador.equals("?ndice de Rotaci?n de Empleados") || Indicador.equals("?ndice de Satisfacci?n del Personal")
                                             || Indicador.equals("Indice de Satisfaccion de Empleados ") || Indicador.equals("Indice de Satisfaccion del Personal")
-                                            || Indicador.equals("Calificación DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari")) {
+                                            || Indicador.equals("Calificaci?n DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari")) {
                                         ObjAcumulado = objAnual;
                                     }
                     %> 
@@ -412,17 +406,6 @@
                         
                         
                         <%if(Indicador.equals("SSI")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -433,19 +416,7 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%>
-                        <%}else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <%}else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){ %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -457,18 +428,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                         <%}else if(medida.equals("%") && Indicador.equals("CSI")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -479,40 +438,20 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%> 
-                        
-                        
-                        
-                        
                        <% }else if(medida.equals("%")){%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                         if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else{ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -528,7 +467,7 @@
                   </tr>
                 <%} } }%> 
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalObtenido%></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalOptimo%></td>
@@ -544,10 +483,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -577,7 +512,7 @@
                                 totalObtenido2 += puntosObtenidos;
                                 totalOptimo2 += puntosOptimos;
                                 if(Indicador.equals("Porcentaje de ordenes abiertas mayores a 30 dias") || Indicador.equals("Certificacion CESVI") || 
-                                        Indicador.equals("Índice de Rotación de Empleados") || Indicador.equals("Índice de Satisfacción del Personal") || 
+                                        Indicador.equals("?ndice de Rotaci?n de Empleados") || Indicador.equals("?ndice de Satisfacci?n del Personal") || 
                                         Indicador.equals("Indice de Satisfaccion de Empleados ")){
                                     ObjAcumulado=objAnual;   
                                 }
@@ -586,19 +521,8 @@
                     <tr>
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
-                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -610,17 +534,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                        <% }else if(Indicador.equals("SSI")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -632,42 +545,19 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%> 
                         <%} else if(medida.equals("%")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :CalibrI; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else if(Indicador.equals("Certificacion CESVI")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -678,10 +568,6 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <% } }else{ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -697,7 +583,7 @@
                   </tr>
                 <%  } } } %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalObtenido2%></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalOptimo2%></td>
@@ -713,10 +599,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -749,12 +631,12 @@
                                     if (Indicador.equals("Dias Inventario Autos Nuevos sin considerar flotillas") || Indicador.equals("BSC Planta")
                                             || Indicador.equals("Unidades demostradoras vencidas") || Indicador.equals("Poscicion en Ranking Nacional de Ventas Menudeo ")
                                             || Indicador.equals("Porcentaje de inventario con antiguedad > a 60 dias") || Indicador.equals("Cumplimiento objetivo mensual de ventas planta")
-                                            || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitación") || Indicador.equals("Indice de Rotacion de Empleados")
+                                            || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitaci?n") || Indicador.equals("Indice de Rotacion de Empleados")
                                             || Indicador.equals("Indice de Satisfaccion de Empleados") || Indicador.equals("dias Inventario Autos Nuevos sin considerar flotillas")
-                                            || Indicador.equals("Inventario con antiguedad mayor a 60 dias") || Indicador.equals("Índice de Rotación de Empleados")
-                                            || Indicador.equals("Índice de Satisfacción del Personal") || Indicador.equals("Indice de Satisfaccion de Empleados ")
-                                            || Indicador.equals("Indice de Satisfacción de Empleados ") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
-                                            || Indicador.equals("Calificación DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari") || Indicador.equals("Calificación Indicador DOD")
+                                            || Indicador.equals("Inventario con antiguedad mayor a 60 dias") || Indicador.equals("?ndice de Rotaci?n de Empleados")
+                                            || Indicador.equals("?ndice de Satisfacci?n del Personal") || Indicador.equals("Indice de Satisfaccion de Empleados ")
+                                            || Indicador.equals("Indice de Satisfacci?n de Empleados ") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion")
+                                            || Indicador.equals("Calificaci?n DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari") || Indicador.equals("Calificaci?n Indicador DOD")
                                             || Indicador.equals("Cumplimiento objetivo mensual de ventas TMEX") || Indicador.equals("Cobertura en la Zona de Influencia")) {
                                         ObjAcumulado = objAnual;
                                     }
@@ -763,17 +645,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
                         <%if(Indicador.equals("CSI")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td>  
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -783,19 +654,7 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
-                        <% } } else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <% } } else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -807,17 +666,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                         <%   } else if(Indicador.equals("SSI")){ %>
-                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -829,42 +677,19 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%> 
                         <%} else if(medida.equals("%")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else if(Indicador.equals("dias Inventario Autos Nuevos sin considerar flotillas") || Indicador.equals("Dias Inventario Autos Nuevos sin considerar flotillas")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -875,10 +700,6 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}}else{ %> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -894,7 +715,7 @@
                   </tr>
                 <% } } } %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalObtenido3%></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalOptimo3%></td>
@@ -910,10 +731,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -947,7 +764,7 @@
                                         Indicador.equals("Porcentaje de inventario con antiguedad > a 60 dias") || Indicador.equals("dias Inventario unidades seminuevas") || 
                                          Indicador.equals("dias Inventario Autos Nuevos sin considerar flotillas") || Indicador.equals("Unidades demostradoras vencidas") || 
                                          Indicador.equals("Cumplimiento objetivo mensual de ventas planta") || Indicador.equals("Cumplimiento al programa cuatrimestral de capacitacion") || 
-                                         Indicador.equals("Índice de Rotación de Empleados") || Indicador.equals("Indice de Satisfaccion de Empleados ") || 
+                                         Indicador.equals("?ndice de Rotaci?n de Empleados") || Indicador.equals("Indice de Satisfaccion de Empleados ") || 
                                          Indicador.equals("Certificacion Tmex") || Indicador.equals("ICC indicador de seminuevos")){  
                                   ObjAcumulado= objAnual;    
                                 } 
@@ -955,19 +772,7 @@
                     <tr>
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
-                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -979,17 +784,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                        <% } else if(Indicador.equals("SSI")){ %>
-                       <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -1001,42 +795,20 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%>
                         <%}else if(medida.equals("%")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                             <%}else if(Indicador.equals("Dias Inventario unidades seminuevas") || Indicador.equals("dias Inventario unidades seminuevas") || Indicador.equals("dias Inventario Autos Nuevos sin considerar flotillas") || Indicador.equals("Dias Inventario Autos Nuevos sin considerar flotillas")){%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre)+medida%></td> 
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1047,10 +819,6 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -1066,7 +834,7 @@
                   </tr>
                 <% } } }  %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalObtenido4%></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalOptimo4%></td>
@@ -1082,10 +850,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -1121,19 +885,7 @@
                     <tr>
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
-                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <%if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1145,17 +897,6 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%> 
                        <%} else if(Indicador.equals("SSI")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -1167,35 +908,19 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%>     
                         <%}else if(medida.equals("%")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else{ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -1211,7 +936,7 @@
                   </tr>
                 <%  } } }  %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalObtenido5%></td>
                     <td align="CENTER" style="font-family :Calibri; font-size: small; font-weight: bold; border: black 1px solid"><%=(int) totalOptimo5%></td>
@@ -1227,10 +952,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;  border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -1268,17 +989,7 @@
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
                         <%if(Indicador.equals("Penetracion VACH") || Indicador.equals("Penetracion VACH Alfa") || Indicador.equals("Penetracion en Venta de Contratos de Servicio") || Indicador.equals("Penetracion en Venta de Contratos de Servicio Alfa")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){  cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1288,19 +999,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
-                        <% }} else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <% }} else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1312,17 +1012,7 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                         <%} else if(Indicador.equals("SSI")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
+                         
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -1334,35 +1024,19 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%> 
                        <%} else if(medida.equals("%")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%   }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                            if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -1378,7 +1052,7 @@
                   </tr>
                 <% }  }  }   %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalObtenido6%></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalOptimo6%></td>
@@ -1394,10 +1068,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL/td></FONT>
@@ -1429,9 +1099,9 @@
                                 
                                 if(Indicador.equals("Composicion del inventario") || Indicador.equals("BSC Planta") || Indicador.equals("Dias inventario") || 
                                         Indicador.equals("Indice de Satisfaccion de Empleados") || Indicador.equals("Composicion del inventario (Obsoleto)") || 
-                                        Indicador.equals("Índice de Satisfacción del Personal") || Indicador.equals("Indice de Satisfaccion de Empleados ") ||
+                                        Indicador.equals("?ndice de Satisfacci?n del Personal") || Indicador.equals("Indice de Satisfaccion de Empleados ") ||
                                         Indicador.equals("ComPosicion del inventario") || Indicador.equals("ComPosicion del inventario (Obsoleto)") || 
-                                        Indicador.equals("dias inventario") || Indicador.equals("Calificación DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari")){   
+                                        Indicador.equals("dias inventario") || Indicador.equals("Calificaci?n DSC Planta") || Indicador.equals("Modelo de Calidad TSM Kodawari")){   
                                   ObjAcumulado= objAnual;        
                                 }   
                                 
@@ -1445,17 +1115,7 @@
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
                         <%if(Indicador.equals("ComPosicion del inventario (Obsoleto)") || Indicador.equals("Composicion del inventario (Obsoleto)") || Indicador.equals("Penetracion VACH") || Indicador.equals("Penetracion VACH Mitsu") || Indicador.equals("Penetracion en Venta de Contratos de Servicio") || Indicador.equals("Penetracion en Venta de Contratos de Servicio Mitsu") || Indicador.equals("Composicion del inventario") || Indicador.equals("ComPosicion del inventario")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado * 100)+medida%></td>
@@ -1465,19 +1125,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>
                         <%}else{%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
-                       <%}  }else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                       <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                       <%}  }else if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
+                       
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1489,17 +1138,7 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                        <%} else if(Indicador.equals("SSI")){ %>
-                       <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>  
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}else{%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}%> 
+                       
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
@@ -1512,35 +1151,19 @@
                         <%}%>
   
                         <% }else if(medida.equals("%")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                        <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                        <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -1556,7 +1179,7 @@
                   </tr>
                 <%   } } } %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalObtenido7%></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalOptimo7%></td>
@@ -1572,10 +1195,6 @@
                     <tr>
                         <td bgcolor="black" width="2%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">AREA</td></FONT>
                         <td bgcolor="black" width="18%" align="CENTER"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small; border: black 1px solid">INDICADOR</td></FONT>
-       			<td bgcolor="#154360" width="5%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ GLOBAL ANUAL</td></FONT>
-       			<td bgcolor="#154360" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJ <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-                        <td bgcolor="#154360" width="9%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
-       			<td bgcolor="#154360" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMP <%=mesCuatrimestre%> MES CUATRIMESTRE</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">OBJETIVO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="8%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">INCURRIDO ANUAL</td></FONT>
        			<td bgcolor="#512E5F" width="7%" align="CENTER" style="border: black 1px solid; border-width: 0 1px 0 1px;"><FONT COLOR="white" style="font-family :Calibri; font-weight: bold; font-size: xx-small;">%CUMPLIMIENTO ANUAL</td></FONT>
@@ -1610,29 +1229,18 @@
                                          Indicador.equals("Intereses Pagados Plan Piso") || Indicador.equals("Entrega Oportuna de Estados Financieros y MDUAS") || 
                                          Indicador.equals("Dias Cartera Refacciones") || Indicador.equals("Dias Cartera Servicio") || Indicador.equals("Dias Cartera Hojalateria y Pintura") || 
                                          Indicador.equals("Dias Cartera Autos Nuevos (sin Gobierno)") || Indicador.equals("Dias Cartera Incentivos CM") || Indicador.equals("Dias Cartera SPDC") || 
-                                         Indicador.equals("Índice de Rotación de Empleados") || Indicador.equals("Índice de Satisfacción del Personal") || 
-                                         Indicador.equals("Indice de Satisfacción de Empleados ") || Indicador.equals("Indice de Satisfaccion del Personal") || 
+                                         Indicador.equals("?ndice de Rotaci?n de Empleados") || Indicador.equals("?ndice de Satisfacci?n del Personal") || 
+                                         Indicador.equals("Indice de Satisfacci?n de Empleados ") || Indicador.equals("Indice de Satisfaccion del Personal") || 
                                          Indicador.equals("Dias Cartera Incentivos Toyota Financial") || Indicador.equals("Modelo de Calidad TSM Kodawari") || 
-                                         Indicador.equals("Calificación DSC Planta") || Indicador.equals("Indice de Satisfaccion de Empleados ")){    
+                                         Indicador.equals("Calificaci?n DSC Planta") || Indicador.equals("Indice de Satisfaccion de Empleados ")){    
                                   ObjAcumulado= objAnual;      
                                 }  
                 %> 
                     <tr>
                         <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=Area%></td>
                         <td align="left" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=Indicador%></td>
-                        <% if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("Índice de Rotación de Empleados")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual * 100)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre * 100)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre * 100)+medida%></td>
-                        <% }if(cumplimientoCuatrimestre==0 || cumplimientoCuatrimestre==0.0 || cumplimientoCuatrimestre==0.00){ 
-                        cumplimientoCuatrimestre=0.0; %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=cumplimientoCuatrimestre+ "%"%></td> 
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td>   
-                        <%}%>
+                        <% if(Indicador.equals("Indice de Rotacion de Empleados") || Indicador.equals("?ndice de Rotaci?n de Empleados")){%>
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1644,43 +1252,21 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%>
                        <% } else if(medida.equals("%")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objAnual * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(objCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoCuatrimestre * 100))+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2) + "%"%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objAnual)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) objCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoCuatrimestre)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoCuatrimestre,2)+ "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%"%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%"%>
                         <%}else if(Indicador.equals("Dias Cartera Refacciones") || Indicador.equals("Dias Cartera Servicio") || Indicador.equals("Dias Cartera Hojalateria y Pintura") || Indicador.equals("Dias Cartera Autos Nuevos (sin Gobierno)") || Indicador.equals("Dias Cartera Incentivos CM") || Indicador.equals("Dias Cartera SPDC") || 
                         Indicador.equals("Dias Cartera Incentivos Toyota Financial") || Indicador.equals("Dias Cartera Autos Nuevos") || Indicador.equals("Dias Cartera Incentivos Financiera")){%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objAnual)+medida%></td>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(objCuatrimestre)+medida%></td>
-                        <%if(incurridoCuatrimestre==0){ incurridoCuatrimestre=0.0;%>
-                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoCuatrimestre)+medida%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoCuatrimestre)+medida%></td>
-                        <%}if(cumplimientoCuatrimestre==0){ cumplimientoCuatrimestre=0.0;%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoCuatrimestre) + "%"%></td>
-                        <%}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoCuatrimestre) + "%"%></td> 
-                        <%}%> 
+                        
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado)+medida%></td>
                         <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
@@ -1691,10 +1277,6 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}}else{%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objAnual, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(objCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoCuatrimestre, 2)%>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoCuatrimestre + "%" %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(ObjAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(incurridoAcumulado, 2)%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) cumplimientoAcumulado + "%" %>
@@ -1710,7 +1292,7 @@
                   </tr>
                 <% } } }  %>
                  <tr>
-                    <td align="CENTER" colspan="8"><font size="1"></font></td>
+                    <td align="CENTER" colspan="4"><font size="1"></font></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid">TOTALES</td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalObtenido8%></td>
                     <td align="CENTER" style="font-family :Calibri; font-weight: bold; font-size: small; border: black 1px solid"><%=(int) totalOptimo8%></td>
