@@ -69,8 +69,8 @@
         departamentos vista = new departamentos();
         ArrayList<departamentos> arrayDepartamentos = new ArrayList<departamentos>();
         arrayDepartamentos = vista.consultarDepartamentos();
-        String [] razonSocial = {"CONTINENTAL AUTOMOTRIZ S.A. DE C.V.", "MITSUBISHI CONTINENTAL", "FIAT CONTINENTAL", "TENANCINGO", "LERMA", "ATLACOMULCO", "SAN RAFAEL CDFJR","AUTOPOLANCO CDFJR","ALFA ROMEO - MITSUBISHI","TOYOTA SANTA FE","PUERTA SANTA FE","HYUNDAI METEPEC","HYUNDAI PATRIOTISMO", "HYUNDAI SANTA FE"};
-        String [] unidadNegocio= {"Continental", "Mitsuautos", "Automodena", "Tenancingo", "Lerma", "Atlacomulco","Autopolanco", "AutopolancoChrysler", "Alfa-mitsu", "Nihon", "PuertaSantaFe", "KoreanMotors", "HyundaiPatriotismo", "HyundaiSantaFe"};
+        String [] razonSocial = {"CONTINENTAL AUTOMOTRIZ S.A. DE C.V.", "MITSUBISHI CONTINENTAL", "FIAT CONTINENTAL", "TENANCINGO", "LERMA", "ATLACOMULCO", "SAN RAFAEL CDFJR","AUTOPOLANCO CDFJR","ALFA ROMEO - AUTOPOLANCO", "MITSUBISHI - AUTOPOLANCO","TOYOTA SANTA FE","PUERTA SANTA FE","HYUNDAI METEPEC","HYUNDAI PATRIOTISMO", "HYUNDAI SANTA FE"};
+        String [] unidadNegocio= {"Continental", "Mitsuautos", "Automodena", "Tenancingo", "Lerma", "Atlacomulco","Autopolanco", "AutopolancoChrysler", "Alfa-Auto", "Mitsu-Auto", "Nihon", "PuertaSantaFe", "KoreanMotors", "HyundaiPatriotismo", "HyundaiSantaFe"};
        
         String Servicio = arrayDepartamentos.get(0).getBal_departamento();
         String Hojalateria = arrayDepartamentos.get(1).getBal_departamento(); 
@@ -112,7 +112,7 @@
                         <td bgcolor="#23350c" width="6%" align="CENTER" 
                             style="font-weight: bold;  border: black 1px solid; font-family: Calibri">
                              <font color="white" size="4">AREA</font></td>
-                        <%if (unidadNegocio[w].equals("Alfa-mitsu")) { 
+                        <%if (unidadNegocio[w].equals("Alfa-Auto")) { 
                         System.out.println("----: "+ unidadNegocio[8]);    
                         
         Servicio = "SERVICIO";

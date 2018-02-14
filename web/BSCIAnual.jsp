@@ -131,16 +131,13 @@
              if (unidadNegocio.equals("PuertaSantaFe")) {
                 razonSocial = "PUERTA SANTA FE";
             }
-              if (unidadNegocio.equals("Alfa-Mitsu")) {
-                razonSocial = "ALFA ROMEO - MITSUBISHI";
-                Servicio = "SERVICIO";
-                Hojalateria = "HOJALATERIA Y PINTURA"; 
-                VentasNuevos = "VENTAS NUEVOS ALFA"; 
-                VentasSemi = "VENTAS NUEVOS MITSU"; 
-                VentasFlotilla = "VENTAS FLOTILLA"; 
-                FI = "F&I ALFA";
-                Refacciones = "F&I MITSU"; 
-                AdmonFinanza = "ADMINISTRACION Y FINANZAS"; 
+              if (unidadNegocio.equals("Alfa-Auto")) {
+                razonSocial = "ALFA ROMEO - AUTOPOLANCO";
+         
+            }
+              if (unidadNegocio.equals("Mitsu-Auto")) {
+                razonSocial = "MITSUBISHI - AUTOPOLANCO";
+         
             }
                if (unidadNegocio.equals("Mitsubishi")) {
                 razonSocial = "MITSUBISHI";
