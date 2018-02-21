@@ -18,7 +18,7 @@ public class utilMath {
     public String formatoMiles(String cadena){
         String valorRetorno = "";
         String aux = "";
-        int cuentaParaComas = 0;
+        int cuentaParaComas = -3;
         for (int x=(cadena.length()-1);x>=0;x--){
             //System.out.println("Caracter " + x + ": " + cadena.charAt(x));
             if(cuentaParaComas > 2){
