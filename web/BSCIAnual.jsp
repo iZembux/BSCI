@@ -23,7 +23,7 @@
         <br>
         <%  System.out.println("==========================Bienvenidos Balance Anual ==============================");
         utilMath objMath = new utilMath();
-        DecimalFormat df = new DecimalFormat("#.0"); 
+        DecimalFormat df = new DecimalFormat("0.00"); 
         int anioReporte = 0;
         int mesReporte = 0;
         Calendar fecha_hoy = Calendar.getInstance(); 
@@ -438,13 +438,35 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
                         <%}%> 
+                       <% }else if(medida.equals("%") && Indicador.equals("CPS")){  %>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
+                        <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoAcumulado * 100)+medida%></td>
+                        <%}if(cumplimientoAcumulado==0 || cumplimientoAcumulado==0.0 || cumplimientoAcumulado==0.00){ cumplimientoAcumulado=0.0; %>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>  
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
+                        <%}%> 
+                       <% }else if(medida.equals("%") && Indicador.equals("FFV")){  %>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
+                        <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td>
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoAcumulado * 100)+medida%></td>
+                        <%}if(cumplimientoAcumulado==0 || cumplimientoAcumulado==0.0 || cumplimientoAcumulado==0.00){ cumplimientoAcumulado=0.0; %>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>  
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td> 
+                        <%}%> 
                        <% }else if(medida.equals("%")){%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                         if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
@@ -549,8 +571,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
@@ -676,13 +698,24 @@
                         <%}else{%>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
                         <%}%> 
-                        <%} else if(medida.equals("%")){ %>
+                        <%} else if(Indicador.equals("CPS")){ %>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(ObjAcumulado * 100)+medida%></td>
+                        <%if(incurridoAcumulado==0){ incurridoAcumulado=0.0;%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(incurridoAcumulado)+medida%></td> 
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(incurridoAcumulado * 100)+medida%></td>
+                        <%}if(cumplimientoAcumulado==0){ cumplimientoAcumulado=0.0;%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(cumplimientoAcumulado)+ "%"%></td>
+                        <%}else{%>
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=df.format(cumplimientoAcumulado)+ "%"%></td>
+                        <%}%> 
+                        <%}else if(medida.equals("%")){ %>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(ObjAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
@@ -799,8 +832,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
@@ -912,8 +945,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%  }if(medida.equals("$")){ %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
@@ -1028,8 +1061,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <%   }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                            if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
@@ -1155,8 +1188,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                        <%  }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                        <% }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){ %>
@@ -1256,8 +1289,8 @@
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=objMath.formatoMiles(""+ (int)(incurridoAcumulado * 100))+medida%></td>
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2) + "%"%></td>
                         <% }if(medida.equals("$")){  %>
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) ObjAcumulado)%> 
-                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(""+ (int) incurridoAcumulado)%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (ObjAcumulado))%> 
+                        <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=medida + " " + objMath.formatoMiles(df.format (incurridoAcumulado))%> 
                         <td align="CENTER" style="font-family :Calibri; font-size: small; border: black 1px solid"><%=(int) objMath.redondear(cumplimientoAcumulado,2)+ "%" %>
                         <%  }if (medida.equals("")) {       
                             if(Indicador.equalsIgnoreCase("Productividad del taller")){  %>
